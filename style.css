@@ -51,19 +51,11 @@ body::before {
 }
 
 @keyframes slideUp {
-    from {
-        opacity: 0;
-        transform: translateY(40px) scale(0.95);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
+    from { opacity: 0; transform: translateY(40px) scale(0.95); }
+    to   { opacity: 1; transform: translateY(0) scale(1); }
 }
 
-.form {
-    width: 100%;
-}
+.form { width: 100%; }
 
 .title {
     text-align: center;
@@ -97,7 +89,7 @@ body::before {
 
 .input {
     width: 100%;
-    padding: 18px 20px 18px 20px;
+    padding: 18px 20px;
     border: 2px solid #e2e8f0;
     border-radius: 16px;
     font-size: 1rem;
@@ -114,7 +106,7 @@ body::before {
         0 0 0 4px rgba(102, 126, 234, 0.1),
         0 8px 25px rgba(102, 126, 234, 0.15);
     transform: translateY(-2px);
-    background: rgba(255, 255, 255, 1);
+    background: #fff;
 }
 
 .input:focus + .label,
@@ -134,7 +126,7 @@ body::before {
     font-size: 1rem;
     font-weight: 500;
     pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s;
     transform-origin: left center;
 }
 
@@ -148,7 +140,7 @@ body::before {
     font-size: 1.1rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transition: all 0.3s;
     text-transform: uppercase;
     letter-spacing: 0.5px;
     margin-top: 20px;
@@ -168,24 +160,15 @@ body::before {
     transition: left 0.5s;
 }
 
-.submitBtn:hover::before {
-    left: 100%;
-}
-
+.submitBtn:hover::before { left: 100%; }
 .submitBtn:hover {
     transform: translateY(-3px);
     box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
     background: linear-gradient(135deg, #5a67d8 0%, #6b46c1 100%);
 }
-
 .submitBtn:active {
     transform: translateY(-1px);
     box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
-}
-
-.inputContainer:hover .input:not(:focus) {
-    border-color: #cbd5e0;
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.08);
 }
 
 .inputContainer:nth-child(2) { animation: fadeInUp 0.6s ease-out 0.1s both; }
@@ -195,68 +178,23 @@ body::before {
 .submitBtn { animation: fadeInUp 0.6s ease-out 0.5s both; }
 
 @keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 480px) {
-    .signupFrm {
-        padding: 30px 25px;
-        margin: 15px;
-        border-radius: 20px;
-    }
-    
-    .title {
-        font-size: 1.8rem;
-        margin-bottom: 30px;
-    }
-    
-    .input {
-        padding: 16px 18px;
-        font-size: 0.95rem;
-    }
-    
-    .label {
-        font-size: 0.95rem;
-        top: 16px;
-        left: 18px;
-    }
-    
-    .submitBtn {
-        padding: 16px;
-        font-size: 1rem;
-    }
-}
-
-.input:valid {
-    border-color: #48bb78;
-}
-
-.input:valid + .label {
-    color: #48bb78;
-}
+.input:valid { border-color: #48bb78; }
+.input:valid + .label { color: #48bb78; }
 
 @media (max-width: 768px) {
     .signupFrm {
         max-width: 90%;
         padding: 40px 30px;
     }
-
     .title {
         font-size: 2rem;
         margin-bottom: 35px;
     }
-
-    .input {
-        font-size: 1rem;
-        padding: 16px 18px;
-    }
+    .input { font-size: 1rem; padding: 16px 18px; }
 }
 
 @media (max-width: 480px) {
@@ -265,45 +203,18 @@ body::before {
         margin: 10px;
         border-radius: 18px;
     }
-
     .title {
         font-size: 1.6rem;
         margin-bottom: 25px;
     }
-
-    .input {
-        padding: 14px 16px;
-        font-size: 0.95rem;
-    }
-
-    .label {
-        font-size: 0.9rem;
-        top: 14px;
-        left: 16px;
-    }
-
-    .submitBtn {
-        padding: 14px;
-        font-size: 0.95rem;
-    }
+    .input { padding: 14px 16px; font-size: 0.95rem; }
+    .label { font-size: 0.9rem; top: 14px; left: 16px; }
+    .submitBtn { padding: 14px; font-size: 0.95rem; }
 }
 
 @media (max-width: 360px) {
-    .signupFrm {
-        padding: 25px 15px;
-    }
-
-    .title {
-        font-size: 1.4rem;
-    }
-
-    .input {
-        font-size: 0.9rem;
-        padding: 12px 14px;
-    }
-
-    .submitBtn {
-        font-size: 0.9rem;
-        padding: 12px;
-    }
+    .signupFrm { padding: 25px 15px; }
+    .title { font-size: 1.4rem; }
+    .input { font-size: 0.9rem; padding: 12px 14px; }
+    .submitBtn { font-size: 0.9rem; padding: 12px; }
 }
