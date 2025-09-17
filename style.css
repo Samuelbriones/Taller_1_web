@@ -7,7 +7,11 @@
 body {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
     min-height: 100vh;
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -186,75 +190,56 @@ body::before {
 .input:valid + .label { color: #48bb78; }
 
 @media (max-width: 768px) {
+    html, body {
+        background-attachment: scroll;
+    }
+    body {
+        padding: 15px;
+        overflow-x: hidden;
+    }
     .signupFrm {
-        max-width: 98vw;
-        padding: 30px 10px;
-        min-width: 0;
-        box-sizing: border-box;
+        max-width: 100%;
+        padding: 35px 25px;
+        border-radius: 20px;
+    }
+    .title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    html, body {
+        background-attachment: scroll;
+        overflow-x: hidden;
+    }
+    body {
+        padding: 10px;
+        min-height: 100vh;
+        background-size: 100% 100%;
+    }
+    .signupFrm {
+        padding: 30px 20px;
+        border-radius: 16px;
     }
     .title {
         font-size: 1.5rem;
         margin-bottom: 25px;
     }
     .input {
-        font-size: 1rem;
-        padding: 14px 10px;
-    }
-    .inputContainer {
-        margin-bottom: 18px;
-    }
-    .submitBtn {
-        padding: 14px;
-        font-size: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .signupFrm {
-        padding: 18px 5px;
-        margin: 5px;
-        border-radius: 12px;
-        min-width: 0;
-    }
-    .title {
-        font-size: 1.2rem;
-        margin-bottom: 18px;
-    }
-    .input {
-        padding: 10px 8px;
+        padding: 16px 18px;
         font-size: 0.95rem;
     }
     .label {
-        font-size: 0.85rem;
-        top: 10px;
-        left: 8px;
+        font-size: 0.95rem;
+        top: 16px;
+        left: 18px;
     }
     .submitBtn {
-        padding: 10px;
-        font-size: 0.95rem;
-    }
-    .inputContainer {
-        margin-bottom: 12px;
-    }
-}
-
-@media (max-width: 360px) {
-    .signupFrm {
-        padding: 10px 2px;
-        border-radius: 8px;
-    }
-    .title {
+        padding: 16px;
         font-size: 1rem;
     }
-    .input {
-        font-size: 0.85rem;
-        padding: 8px 4px;
-    }
-    .submitBtn {
-        font-size: 0.85rem;
-        padding: 8px;
-    }
     .inputContainer {
-        margin-bottom: 8px;
+        margin-bottom: 25px;
     }
 }
