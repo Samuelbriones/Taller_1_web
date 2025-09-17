@@ -187,34 +187,74 @@ body::before {
 
 @media (max-width: 768px) {
     .signupFrm {
-        max-width: 90%;
-        padding: 40px 30px;
+        max-width: 98vw;
+        padding: 30px 10px;
+        min-width: 0;
+        box-sizing: border-box;
     }
     .title {
-        font-size: 2rem;
-        margin-bottom: 35px;
+        font-size: 1.5rem;
+        margin-bottom: 25px;
     }
-    .input { font-size: 1rem; padding: 16px 18px; }
+    .input {
+        font-size: 1rem;
+        padding: 14px 10px;
+    }
+    .inputContainer {
+        margin-bottom: 18px;
+    }
+    .submitBtn {
+        padding: 14px;
+        font-size: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
     .signupFrm {
-        padding: 30px 20px;
-        margin: 10px;
-        border-radius: 18px;
+        padding: 18px 5px;
+        margin: 5px;
+        border-radius: 12px;
+        min-width: 0;
     }
     .title {
-        font-size: 1.6rem;
-        margin-bottom: 25px;
+        font-size: 1.2rem;
+        margin-bottom: 18px;
     }
-    .input { padding: 14px 16px; font-size: 0.95rem; }
-    .label { font-size: 0.9rem; top: 14px; left: 16px; }
-    .submitBtn { padding: 14px; font-size: 0.95rem; }
+    .input {
+        padding: 10px 8px;
+        font-size: 0.95rem;
+    }
+    .label {
+        font-size: 0.85rem;
+        top: 10px;
+        left: 8px;
+    }
+    .submitBtn {
+        padding: 10px;
+        font-size: 0.95rem;
+    }
+    .inputContainer {
+        margin-bottom: 12px;
+    }
 }
 
 @media (max-width: 360px) {
-    .signupFrm { padding: 25px 15px; }
-    .title { font-size: 1.4rem; }
-    .input { font-size: 0.9rem; padding: 12px 14px; }
-    .submitBtn { font-size: 0.9rem; padding: 12px; }
+    .signupFrm {
+        padding: 10px 2px;
+        border-radius: 8px;
+    }
+    .title {
+        font-size: 1rem;
+    }
+    .input {
+        font-size: 0.85rem;
+        padding: 8px 4px;
+    }
+    .submitBtn {
+        font-size: 0.85rem;
+        padding: 8px;
+    }
+    .inputContainer {
+        margin-bottom: 8px;
+    }
 }
