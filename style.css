@@ -183,13 +183,11 @@ body::before {
     box-shadow: 0 8px 20px rgba(102, 126, 234, 0.3);
 }
 
-/* Efectos hover para los inputs */
 .inputContainer:hover .input:not(:focus) {
     border-color: #cbd5e0;
     box-shadow: 0 4px 12px rgba(102, 126, 234, 0.08);
 }
 
-/* Animaciones de aparición escalonada */
 .inputContainer:nth-child(2) { animation: fadeInUp 0.6s ease-out 0.1s both; }
 .inputContainer:nth-child(3) { animation: fadeInUp 0.6s ease-out 0.2s both; }
 .inputContainer:nth-child(4) { animation: fadeInUp 0.6s ease-out 0.3s both; }
@@ -207,7 +205,6 @@ body::before {
     }
 }
 
-/* Responsive */
 @media (max-width: 480px) {
     .signupFrm {
         padding: 30px 25px;
@@ -243,4 +240,70 @@ body::before {
 
 .input:valid + .label {
     color: #48bb78;
+}
+
+@media (max-width: 768px) {
+    .signupFrm {
+        max-width: 90%;
+        padding: 40px 30px;
+    }
+
+    .title {
+        font-size: 2rem;
+        margin-bottom: 35px;
+    }
+
+    .input {
+        font-size: 1rem;
+        padding: 16px 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .signupFrm {
+        padding: 30px 20px;
+        margin: 10px;
+        border-radius: 18px;
+    }
+
+    .title {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+
+    .input {
+        padding: 14px 16px;
+        font-size: 0.95rem;
+    }
+
+    .label {
+        font-size: 0.9rem;
+        top: 14px;
+        left: 16px;
+    }
+
+    .submitBtn {
+        padding: 14px;
+        font-size: 0.95rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .signupFrm {
+        padding: 25px 15px;
+    }
+
+    .title {
+        font-size: 1.4rem;
+    }
+
+    .input {
+        font-size: 0.9rem;
+        padding: 12px 14px;
+    }
+
+    .submitBtn {
+        font-size: 0.9rem;
+        padding: 12px;
+    }
 }
